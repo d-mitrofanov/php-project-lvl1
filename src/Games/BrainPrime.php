@@ -4,7 +4,7 @@ namespace Brain\Games\Games\BrainPrime;
 
 use function Brain\Games\Engine\startGame;
 
-function isPrime($num)
+function isPrime(int $num): bool
 {
     if ($num === 1) {
         return false;

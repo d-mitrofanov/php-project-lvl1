@@ -4,7 +4,7 @@ namespace Brain\Games\Games\BrainGCD;
 
 use function Brain\Games\Engine\startGame;
 
-function getGCD($a, $b): int
+function getGCD(int $a, int $b): int
 {
     while ($b !== 0) {
         $m = $a % $b;
