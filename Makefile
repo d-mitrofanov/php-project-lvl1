@@ -10,6 +10,9 @@ brain-even:
 brain-calc:
 	./bin/brain-calc
 
+brain-gdc:
+	./bin/brain-gdc
+
 validate:
 	composer validate
 
