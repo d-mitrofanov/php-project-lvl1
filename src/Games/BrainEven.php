@@ -9,15 +9,15 @@ function isEven($num)
     return $num % 2 === 0;
 }
 
-function run()
+function run(): callable
 {
     $description = 'Answer "yes" if the number is even, otherwise answer "no"';
-    $getQuestionAndAnswer = function () {
+    $getQuestionAndAnswer = function (): array {
         $num = rand(1, 100);
         $question = $num;
         $answer = isEven($num) ? 'yes' : 'no';
         return [$question, $answer];
     };
 
-    return startGame($getQuestionAndAnswer, $description);
+    return fn () => startGame($getQuestionAndAnswer, $description);
 }

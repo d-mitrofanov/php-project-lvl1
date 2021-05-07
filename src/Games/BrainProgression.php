@@ -4,20 +4,10 @@ namespace Brain\Games\Games\BrainProgression;
 
 use function Brain\Games\Engine\startGame;
 
-function getHiddenProgression(array $progression)
-{
-    $length = count($progression);
-    $indexToHide = rand(0, $length - 1);
-    $hiddenElement = $progression[$indexToHide];
-    $progression[$indexToHide] = "..";
-    $question = implode(" ", $progression);
-    return [$question, $hiddenElement];
-}
-
-function run()
+function run(): callable
 {
     $description = "What number is missing in the progression?";
-    $getQuestionAndAnswer = function () {
+    $getQuestionAndAnswer = function (): array {
         $firstNum = rand(1, 100);
         $progressionLength = rand(5, 11);
         $progressionJump = rand(1, 20);
@@ -35,5 +25,5 @@ function run()
         return [$question, strval($answer)];
     };
 
-    return startGame($getQuestionAndAnswer, $description);
+    return fn () => startGame($getQuestionAndAnswer, $description);
 }

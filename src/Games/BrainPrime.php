@@ -17,15 +17,15 @@ function isPrime($num)
     return true;
 }
 
-function run()
+function run(): callable
 {
     $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $getQuestionAndAnswer = function () {
+    $getQuestionAndAnswer = function (): array {
         $num = rand(1, 100);
         $question = $num;
         $answer = isPrime($num) ? 'yes' : 'no';
         return [$question, $answer];
     };
 
-    return startGame($getQuestionAndAnswer, $description);
+    return fn () => startGame($getQuestionAndAnswer, $description);
 }
