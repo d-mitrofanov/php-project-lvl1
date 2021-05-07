@@ -14,3 +14,6 @@ Brain GDC:
 
 Brain Progression:
 [![asciicast](https://asciinema.org/a/ym4vCZJZgCch1rFvNum62K0NU.svg)](https://asciinema.org/a/ym4vCZJZgCch1rFvNum62K0NU)
+
+Brain Prime:
+[![asciicast](https://asciinema.org/a/5D05deg5LYOequVRuCdKIZmdz.svg)](https://asciinema.org/a/5D05deg5LYOequVRuCdKIZmdz)
