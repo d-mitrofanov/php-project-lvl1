@@ -11,3 +11,6 @@ Brain Calc:
 
 Brain GDC:
 [![asciicast](https://asciinema.org/a/AraxAU61fk4hf9C54aqDrl2v5.svg)](https://asciinema.org/a/AraxAU61fk4hf9C54aqDrl2v5)
+
+Brain Progression:
+[![asciicast](https://asciinema.org/a/ym4vCZJZgCch1rFvNum62K0NU.svg)](https://asciinema.org/a/ym4vCZJZgCch1rFvNum62K0NU)
