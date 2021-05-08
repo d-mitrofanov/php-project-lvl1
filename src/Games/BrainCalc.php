@@ -4,12 +4,13 @@ namespace Brain\Games\Games\BrainCalc;
 
 use function Brain\Games\Engine\startGame;
 
-function run(): callable
+const DESCRIPTION = "What is the result of the expression?";
+const OPERATORS = ['+', '-', '*'];
+
+function run(): void
 {
-    $description = "What is the result of the expression?";
     $getQuestionAndAnswer = function (): array {
-        $operators = ['+', '-', '*'];
-        $operator = $operators[array_rand($operators)];
+        $operator = OPERATORS[array_rand(OPERATORS)];
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
         $question = "{$num1} {$operator} {$num2}";
@@ -31,5 +32,5 @@ function run(): callable
         return [$question, strval($answer)];
     };
 
-    return fn () => startGame($getQuestionAndAnswer, $description);
+    startGame($getQuestionAndAnswer, DESCRIPTION);
 }

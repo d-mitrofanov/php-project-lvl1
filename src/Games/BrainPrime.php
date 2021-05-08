@@ -4,6 +4,8 @@ namespace Brain\Games\Games\BrainPrime;
 
 use function Brain\Games\Engine\startGame;
 
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function isPrime(int $num): bool
 {
     if ($num === 1) {
@@ -17,9 +19,8 @@ function isPrime(int $num): bool
     return true;
 }
 
-function run(): callable
+function run(): void
 {
-    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $getQuestionAndAnswer = function (): array {
         $num = rand(1, 100);
         $question = $num;
@@ -27,5 +28,5 @@ function run(): callable
         return [$question, $answer];
     };
 
-    return fn () => startGame($getQuestionAndAnswer, $description);
+    startGame($getQuestionAndAnswer, DESCRIPTION);
 }

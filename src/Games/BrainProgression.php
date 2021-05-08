@@ -4,7 +4,7 @@ namespace Brain\Games\Games\BrainProgression;
 
 use function Brain\Games\Engine\startGame;
 
-function run(): callable
+function run(): void
 {
     $description = "What number is missing in the progression?";
     $getQuestionAndAnswer = function (): array {
@@ -25,5 +25,5 @@ function run(): callable
         return [$question, strval($answer)];
     };
 
-    return fn () => startGame($getQuestionAndAnswer, $description);
+    startGame($getQuestionAndAnswer, $description);
 }
